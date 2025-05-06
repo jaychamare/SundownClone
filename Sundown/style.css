@@ -1,0 +1,719 @@
+@font-face {
+    font-family: Urbanist-EB;
+    src: url(./Urbanist-ExtraBold.ttf);
+}
+@font-face {
+    font-family: Urbanist-SemiBold;
+    src: url(./Urbanist-SemiBold.ttf);
+}
+@font-face {
+    font-family: Urbanist-Bold;
+    src: url(./Urbanist-Bold.ttf);
+}
+@font-face {
+    font-family: Urbanist-Thin;
+    src: url(./Urbanist-Thin.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    /* background-color: #000; */
+    position: relative;
+    z-index: 10;
+}
+
+#page1{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 0 2vw;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 0;
+    position: relative;
+    z-index: 100;
+    width: 100%;
+}
+
+nav h3{
+    display: none;
+}
+
+#nav-part2{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+#nav-part2 h4{
+    padding: 10px 20px;
+    border: 1px solid #4e4d4d97;
+    border-radius: 50px;
+    font-weight: 700;
+    color: rgba(26, 25, 25, 0.948);
+    font-size: 18px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+#nav-part2 h4::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+}
+
+#nav-part2 h4:hover::after{
+    bottom: 0;
+    border-radius: 0;
+    transition: all ease 0.4s;
+}
+
+#nav-part2 h4 a{
+    text-decoration: none;
+    color: rgba(26, 25, 25, 0.948);
+    position: relative;
+    z-index: 9;
+}
+
+#nav-part2 h4:hover a{
+    color: #fff;
+}
+
+#center{
+    height: 79vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between; 
+    padding-bottom: 5vw;
+    border-bottom: 2px solid #D6D2CC;
+}
+
+#left h3{
+    width: 30vw;
+    font-size: 2.1vw;
+    line-height: 2vw;
+}
+
+#right h1{
+    font-size: 10vw;
+    text-align: right;
+    line-height: 8vw;
+    font-family: Urbanist-EB;
+}
+
+#page1 video{
+    position: relative;
+    width: 100%;
+    margin-top: 4vw;
+    border-radius: 30PX;
+    z-index: 9;
+}
+
+#hero-shape{
+    position: absolute;
+    width: 46vw;
+    height: 36vw;
+    right: 0;
+    top: 81vh;
+}
+
+#hero-1{
+    height: 100%;
+    width: 100%;
+    background-color: #FE380D;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+}
+
+#hero-2{
+    background-color: #FE380D;
+    height: 40vw;
+    width: 40vw;
+    border-radius: 50%;
+    position: absolute;
+    filter: blur(20px);
+    animation-name: anime1;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+@keyframes anime1 {
+    from{
+        transform: translate(10%, -5%);
+    }
+    to{
+        transform: translate(-30%, 10%);
+    }
+}
+#page2{
+    padding: 8vw 0;
+    background-color: #EFEAE3;
+    position: relative;
+}
+
+#moving-text{
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+#moving-text::-webkit-scrollbar{
+    display: none;
+}
+
+.con{
+    white-space: nowrap;
+    display: inline-block;  
+    animation-name: move;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#moving-text h1{
+    font-size: 9vw;
+    /* background-color: lightblue; */
+    display: inline-block;
+}
+
+#circle{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: #FE380D;
+    display: inline-block;
+    margin: 1vw 2vw;
+}
+
+@keyframes move{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+#page2-bottom{
+    height: 90vh;
+    width: 100%;
+    /* background-color: aquamarine; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4.5vw;
+}
+
+#page2-bottom h1{
+    font-size: 4vw;
+    width: 60%;
+    line-height: 4vw;
+    z-index: 9;
+}
+
+#bottom-part2{
+    width: 20%;
+    /* background-color: aqua; */
+}
+
+#bottom-part2 img{
+    width: 100%;
+    border-radius: 15px;
+}   
+
+#bottom-part2 p{
+    margin-top: 2vw;
+    font-size: 1VW;
+}
+
+#orange-circle{
+    height: 35vw;
+    width: 35vw;
+    border-radius: 50%;
+    background: linear-gradient(to top right,#FE330A, #e4613d);
+    position: absolute;
+    top: 53%;
+    left: 22%;
+    filter: blur(25px);
+    animation-name: circle;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+@keyframes circle{
+    from{
+        transform: translate(5%, -5%) skew(0);
+    }
+    to{
+        transform: translate(-5%, 5%) skew(-10deg);
+    }
+}
+
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 2vw 0;
+}
+
+.elem{
+    height: 150px;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid #D6D2CC;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 0 2vw;
+}
+
+.elem h2{
+    font-size: 3vw;
+    position: relative;
+}
+
+.elem .overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #FF9831;
+    position: absolute;
+    top: -100%;
+    transition: all ease 0.3s;
+    left: 0;
+}
+
+.elem:hover .overlay{
+    top: 0;
+}
+
+#fixed-img{
+    height: 30vw;
+    width: 25vw;
+    /* background-color: red; */
+    border-radius: 15px;
+    position: fixed;
+    z-index: 99;
+    left: 50%;
+    top: 18%;
+    display: none;
+    background-size: cover;
+    background-position: center;
+}
+
+#page4{
+    height: 70vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 10vw 5vw;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    width: 25%;
+    border-left: 1px solid #aeadad;
+    padding-left: 2vw;
+    padding-right: 4vw;
+  }
+
+#page5{
+    min-height: 110vh;
+    width: 100%;
+}
+
+#footer{
+    position: fixed;
+    z-index: 9;
+    height: 100vh;
+    width: 100%;
+    bottom: 0;
+    color: #fff;
+    background-color: #000;
+    display: flex;
+    /* align-items: center; */
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 0 2vw;
+}
+
+#footer h1{
+    font-size: 22vw;
+    font-family: Urbanist-EB;
+}
+
+#footer-div{
+    height: 20vh;
+    width: 100%;
+    /* background-color: orangered; */
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4vw;
+}
+
+#footer-div1{
+    font-size: 1.5vw;
+}
+
+#footer-div2 input{
+    background: none;
+    border: none;
+    border-bottom: 1px solid #D8B9AA;
+    font-size: 1.3vw;
+    margin-top: 1.5vw;
+}
+
+::placeholder{
+    color: #D8B9AA;
+}
+
+#footer-bottom{
+    display: flex;
+    justify-content:space-between;
+    border-top: 1px solid #504A45;
+    padding: 1vw;
+}
+
+#full-scr{
+    height: 100vh;
+    width: 100%;
+    background-color: #00000070;
+    position: fixed;
+    z-index: 99;
+    top: -100%;
+    transition: all ease .5s;
+}
+
+#full-div1{
+    height: 50%;
+    width: 100%;
+    background-color: #EFEAE3;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+@media (max-width:600px) {
+    #page1{
+        min-height: 100vh;
+        width: 100vw;
+        padding: 0;
+
+    }
+    
+    nav{
+        padding: 8vw 5vw;
+        background-color: #EFEAE3;
+    }
+
+    nav img{
+        height: 9vh;
+        transition: all ease 0.2s;
+    }
+    
+    #nav-part2{
+        display: none;
+    }
+
+    nav h3{
+        display: block;
+        padding: 3vw 5vw;
+        border: 1px solid #ababab;
+        border-radius: 50px;
+        font-size: 4vw;
+        font-weight: 200;
+        padding-left: 10VW;
+    }
+
+    #center{
+        height: 62vh;
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between; 
+        padding-bottom: 5vw;
+        border-bottom: 2px solid #D6D2CC;
+        flex-direction: column-reverse;
+        padding-bottom: 7vw;
+        padding: 5vw;
+        position: relative;
+        z-index: 9;
+    }
+    
+    #left h3{
+        width: 80%;
+        font-size: 5.5vw;
+        line-height: 7vw;
+    }
+    
+    #right h1{
+        font-size: 15vw;
+        text-align: right;
+        line-height: 14vw;
+    }
+    
+    #page1 video{
+        position: relative;
+        width: 92%;
+        margin-left: 4%;
+        margin-top: 4vw;
+        height: 70vh;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 15PX;
+        z-index: 9;
+    }
+    
+    #hero-shape{
+        position: absolute;
+        width: 82vw;
+        height: 76vw;
+        right: 0;
+        top: 69vh;
+    }
+    
+    #hero-1{
+        height: 100%;
+        width: 100%;
+        background-color: #FE380D;
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+        filter: blur(20px);
+        position: absolute;
+    }
+    
+    #hero-2{
+        background-color: #FE380D;
+        height: 40vw;
+        width: 40vw;
+        border-radius: 50%;
+        position: absolute;
+        filter: blur(20px);
+        animation-name: anime1;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    #page2{
+        padding: 8vw 0;
+        background-color: #EFEAE3;
+        position: relative;
+    }
+    
+    #moving-text{
+        white-space: nowrap;
+        overflow-x: auto;
+    }
+    
+    #moving-text::-webkit-scrollbar{
+        display: none;
+    }
+    
+    .con{
+        white-space: nowrap;
+        display: inline-block;  
+        animation-name: move;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    
+    #moving-text h1{
+        font-size: 9vw;
+        /* background-color: lightblue; */
+        display: inline-block;
+    }
+    
+    #circle{
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        background-color: #FE380D;
+        display: inline-block;
+        margin: 1vw 2vw;
+    }
+
+    #page2-bottom{
+        height: 90vh;
+        width: 100%;
+        /* background-color: aquamarine; */
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 12vw 4vw;
+        flex-direction: column;
+        position: relative;
+        z-index: 9;
+    }
+    
+    #page2-bottom h1{
+        font-size: 6vw;
+        width: 90%;
+        line-height: 6vw;
+        z-index: 9;
+        font-weight: 900;
+    }
+    
+    #bottom-part2{
+        width: 80%;
+    }
+    
+    #bottom-part2 img{
+        width: 100%;
+        border-radius: 15px;
+    }   
+    
+    #bottom-part2 p{
+        margin-top: 3vw;
+        font-size: 4.5VW;
+    
+    }
+    
+    #orange-circle{
+        height: 75vw;
+        width: 75vw;
+        border-radius: 50%;
+        background: linear-gradient(to top right,#FE330A, #e4613d);
+        position: absolute;
+        top: 20%;
+        left: 30%;
+        filter: blur(25px);
+        animation-name: circle;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-direction: alternate;
+    }
+}
+
+#loader{
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    transition: all ease 0.7s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loader h1{
+    font-size: 5vw;
+    color: transparent;
+    background: linear-gradient(to right, orange, orangered);
+    -webkit-background-clip: text;
+    position: absolute;
+    opacity: 0;
+    animation-name: load;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+}
+
+#loader h1:nth-child(2){
+    animation-delay: 2s;
+}
+#loader h1:nth-child(3){
+    animation-delay: 3s;
+}
+
+@keyframes load{
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+    
+}
+
+#bottom-shape{
+    z-index: -10;
+}
+
+#shape1{
+    width: 100vw;
+    height: 60vw;
+    background-color: orangered;
+    border-radius: 50%;
+    position: absolute;
+    top: -90%;
+    left: -20%;
+    animation-name: anim; 
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    filter: blur(25px);
+}
+
+@keyframes anim{
+    from{
+        transform: translate(-10%, -5%);
+    }
+    to{
+        transform: translate(10%, 10%);
+    }
+}
+
+#shape2{
+    width: 80vw;
+    height: 50vw;
+    background-color: orangered; 
+    border-radius: 50%;
+    position: absolute;
+    filter: blur(25px);     
+    animation-name: anim1;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    top: -60%;
+    right: -30%;
+}
+
+@keyframes anim1 {
+    from{
+        transform: translate(10%, 10%)
+    }
+    to{
+        transform: translate(-10%, -10%);
+    }
+}
