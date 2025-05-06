@@ -632,7 +632,7 @@ nav h3{
     font-size: 5vw;
     color: transparent;
     background: linear-gradient(to right, orange, orangered);
-    -webkit-background-clip: text;
+    /* -webkit-background-clip: text; */
     position: absolute;
     opacity: 0;
     animation-name: load;
